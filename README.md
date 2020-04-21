@@ -5,4 +5,4 @@ Two integer signed numbers and two positions of bits i and j (i < j) are given. 
 
 ![Схема к алгоритму](https://github.com/EPM-RD-NETLAB/.NET-Framework-modules/blob/master/Pictures/Scheme.png)
 
-_Tags - bit operation _
+*Tags - bit operations.*
