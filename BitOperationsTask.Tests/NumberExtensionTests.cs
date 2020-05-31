@@ -14,25 +14,25 @@ namespace BitOperationsTask.Tests
         [TestCase(-2147483648, 2147483647, 0, 30, ExpectedResult = -1)]
         [TestCase(-2223, 5440, 18, 23, ExpectedResult = -16517295)]
         [TestCase(2147481425, 5440, 18, 23, ExpectedResult = 2130966353)]
-        public int InsertNumberIntoAnother_Return_Changed_Number(int sourceNumber, int anotherNumber, int i, int j)
+        public int InsertNumberIntoAnother_ReturnChangedNumber(int sourceNumber, int anotherNumber, int i, int j)
         => InsertNumberIntoAnother(sourceNumber, anotherNumber, i, j);
 
         [Test]
-        public void InsertNumberIntoAnother_Throw_ArgumentException_If_i_MoreThan_j() =>
+        public void InsertNumberIntoAnother_IfiMoreThanj_ThrowArgumentException() =>
             Assert.Throws<ArgumentException>(() => InsertNumberIntoAnother(8, 15, 8, 3),
                 message: $"i should be less than or equal to j.");
         [Test]
-        public void InsertNumberIntoAnother_Throw_ArgumentOutOfRangeException_If_i_Equals_MinusOne() =>
+        public void InsertNumberIntoAnother_IfiEqualsMinusOne_ThrowArgumentOutOfRangeException() =>
             Assert.Throws<ArgumentOutOfRangeException>(() => InsertNumberIntoAnother(8, 15, -1, 3),
         message: "i range is from 0 to 31 (including).");
 
         [Test]
-        public void InsertNumberIntoAnother_i_Equals_32_Throw_ArgumentOutOfRangeException() =>
+        public void InsertNumberIntoAnother_IfiEquals32_ThrowArgumentOutOfRangeException() =>
             Assert.Throws<ArgumentOutOfRangeException>(() => InsertNumberIntoAnother(8, 15, 32, 32),
         message: "i range is from 0 to 31 (including).");
 
         [Test]
-        public void InsertNumberIntoAnother_j_Equals_32_Throw_ArgumentOutOfRangeException() =>
+        public void InsertNumberIntoAnother_IfjEquals32_Throw_ArgumentOutOfRangeException() =>
             Assert.Throws<ArgumentOutOfRangeException>(() => InsertNumberIntoAnother(8, 15, 0, 32),
         message: "j range is from 0 to 31 (including).");
     }
