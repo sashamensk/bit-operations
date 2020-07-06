@@ -14,8 +14,8 @@ namespace BitOperationsTask.Tests
         [TestCase(-2147483648, 2147483647, 0, 30, ExpectedResult = -1)]
         [TestCase(-2223, 5440, 18, 23, ExpectedResult = -16517295)]
         [TestCase(2147481425, 5440, 18, 23, ExpectedResult = 2130966353)]
-        public int InsertNumberIntoAnother_ReturnChangedNumber(int sourceNumber, int anotherNumber, int i, int j)
-        => InsertNumberIntoAnother(sourceNumber, anotherNumber, i, j);
+        public int InsertNumberIntoAnother_ReturnChangedNumber(int destinationNumber, int sourceNumber, int i, int j)
+        => InsertNumberIntoAnother(destinationNumber, sourceNumber, i, j);
 
         [Test]
         public void InsertNumberIntoAnother_IfiMoreThanj_ThrowArgumentException() =>
