@@ -1,6 +1,8 @@
-using NUnit.Framework;
 using System;
+using NUnit.Framework;
 using static BitOperationsTask.NumbersExtension;
+
+#pragma warning disable CA1707
 
 namespace BitOperationsTask.Tests
 {
@@ -19,21 +21,18 @@ namespace BitOperationsTask.Tests
 
         [Test]
         public void InsertNumberIntoAnother_IfiMoreThanj_ThrowArgumentException() =>
-            Assert.Throws<ArgumentException>(() => InsertNumberIntoAnother(8, 15, 8, 3),
-                message: $"i should be less than or equal to j.");
+            Assert.Throws<ArgumentException>(() => InsertNumberIntoAnother(8, 15, 8, 3), message: $"i should be less than or equal to j.");
+        
         [Test]
         public void InsertNumberIntoAnother_IfiEqualsMinusOne_ThrowArgumentOutOfRangeException() =>
-            Assert.Throws<ArgumentOutOfRangeException>(() => InsertNumberIntoAnother(8, 15, -1, 3),
-        message: "i range is from 0 to 31 (including).");
+            Assert.Throws<ArgumentOutOfRangeException>(() => InsertNumberIntoAnother(8, 15, -1, 3), message: "i range is from 0 to 31 (including).");
 
         [Test]
         public void InsertNumberIntoAnother_IfiEquals32_ThrowArgumentOutOfRangeException() =>
-            Assert.Throws<ArgumentOutOfRangeException>(() => InsertNumberIntoAnother(8, 15, 32, 32),
-        message: "i range is from 0 to 31 (including).");
+            Assert.Throws<ArgumentOutOfRangeException>(() => InsertNumberIntoAnother(8, 15, 32, 32), message: "i range is from 0 to 31 (including).");
 
         [Test]
         public void InsertNumberIntoAnother_IfjEquals32_Throw_ArgumentOutOfRangeException() =>
-            Assert.Throws<ArgumentOutOfRangeException>(() => InsertNumberIntoAnother(8, 15, 0, 32),
-        message: "j range is from 0 to 31 (including).");
+            Assert.Throws<ArgumentOutOfRangeException>(() => InsertNumberIntoAnother(8, 15, 0, 32), message: "j range is from 0 to 31 (including).");
     }
 }
