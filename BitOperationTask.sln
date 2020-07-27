@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitOperationsTask.Tests", "BitOperationsTask.Tests\BitOperationsTask.Tests.csproj", "{5BF9710E-9BAB-41F3-80A1-4110F0B63717}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitOperationsTask", "BitOperationsTask\BitOperationsTask.csproj", "{B2416FF6-D993-4623-B419-9BCBDA929063}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitOperationsTask", "BitOperationsTask\BitOperationsTask.csproj", "{B2416FF6-D993-4623-B419-9BCBDA929063}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{266CD0BE-0CCA-4F97-846F-AEF109119AE5}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
